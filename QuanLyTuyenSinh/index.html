@@ -7,8 +7,41 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
-     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<body class="bg-gray-100 p-6">
+     <div class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4 text-center">Kiểm Tra Điểm Exam</h2>
+
+    <!-- Input Fields -->
+    <div class="space-y-4">
+      <input type="number" aria-label="number" id="passMark" placeholder="Nhập Điểm Pass" class="w-full p-2 border rounded" />
+
+      <input type="number" aria-label="number" id="score1" placeholder="Nhập Điểm Môn 1" class="w-full p-2 border rounded" />
+      <input type="number" aria-label="number" id="score2" placeholder="Nhập Điểm Môn 2" class="w-full p-2 border rounded" />
+      <input type="number" aria-label="number" id="score3" placeholder="Nhập Điểm Môn 3" class="w-full p-2 border rounded" />
+
+      <select id="area" class="w-full p-2 border rounded">
+        <option value="X">X</option>
+        <option value="A">Khu Vực A</option>
+        <option value="B">Khu Vực B</option>
+        <option value="C">Khu Vực C</option>
+      </select>
+
+      <select id="object" class="w-full p-2 border rounded">
+        <option value="0">Ko có Đối Tượng</option>
+        <option value="1">Đối Tượng 1</option>
+        <option value="2">Đối Tượng 2</option>
+        <option value="3">Đối Tượng 3</option>
+      </select>
+
+      <button onclick="checkResult()" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        Check Result
+      </button>
+
+      <div id="result" class="mt-4 text-lg font-semibold text-center"></div>
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
