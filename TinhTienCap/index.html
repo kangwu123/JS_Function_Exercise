@@ -7,7 +7,34 @@
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+ <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center">Tính Hóa Đơn Cáp</h2>
+    
+    <label class="block mb-2">Mã khách hàng:</label>
+    <input id="customerId" aria-label="text" type="text" class="w-full p-2 border rounded mb-4" />
+
+    <label class="block mb-2">Loại khách hàng:</label>
+    <select id="customerType" class="w-full p-2 border rounded mb-4" onchange="handleCustomerTypeChange()">
+      <option value="residential">Nhà dân</option>
+      <option value="business">Doanh nghiệp</option>
+    </select>
+
+    <div id="connectionsDiv" class="hidden">
+      <label class="block mb-2">Số kết nối:</label>
+      <input id="connections"  aria-label="number" type="number" min="0" class="w-full p-2 border rounded mb-4" />
+    </div>
+
+    <label class="block mb-2">Số kênh cao cấp:</label>
+    <input id="premiumChannels" aria-label="number" type="number" min="0" class="w-full p-2 border rounded mb-4" />
+
+    <button onclick="calculateBill()" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
+      Tính hóa đơn
+    </button>
+
+    <div id="result" class="mt-6 text-lg font-semibold text-center text-green-600"></div>
+  </div>
      <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="./main.js"></script>
 </body>
