@@ -7,7 +7,39 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-gradient-to-r from-purple-100 to-blue-100 min-h-screen flex items-center justify-center p-8 relative overflow-hidden">
+   
+  <!-- Decorative floating circles -->
+  <div class="absolute top-10 left-10 w-32 h-32 bg-yellow-300 rounded-full opacity-30 animate-pulse"></div>
+  <div class="absolute bottom-20 right-20 w-48 h-48 bg-pink-300 rounded-full opacity-20 animate-pulse animation-delay-2000"></div>
+  <div class="absolute top-1/2 right-10 w-24 h-24 bg-green-300 rounded-full opacity-25 animate-pulse animation-delay-4000"></div>
+
+  <!-- Form Container -->
+  <div class="bg-white shadow-lg rounded-xl p-8 max-w-xl w-full space-y-6 relative z-10 border-2 border-purple-300">
+    <h1 class="text-2xl font-bold text-center text-purple-700">💰 Tính Thuế Thu Nhập Cá Nhân 2025</h1>
+
+    <!-- Input Form -->
+    <div class="space-y-4 align-items items-center">
+      <div>
+        <label class="block font-medium">Họ và tên</label>
+        <input id="name" aria-label="name" type="text" class="w-full p-2 border rounded" placeholder="Nguyễn Văn A" />
+      </div>
+      <div>
+        <label class="block font-medium">Tổng thu nhập năm (triệu VNĐ)</label>
+        <input id="income" aria-label="number" type="number" class="w-full p-2 border rounded" placeholder="VD: 200" />
+      </div>
+      <div>
+        <label class="block font-medium">Số người phụ thuộc</label>
+        <input id="dependents" aria-label="number" type="number" class="w-full p-2 border rounded" placeholder="VD: 2" />
+      </div>
+      <button onclick="calculateTax()" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition">Tính Thuế</button>
+    </div>
+
+    <div id="messageBox" class="hidden mb-4 p-3 text-red-700 bg-red-100 rounded"></div>
+    <!-- Output -->
+    <div id="result" class="text-lg font-semibold text-center text-gray-700"></div>
+  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="./main.js"></script>
 </body>
