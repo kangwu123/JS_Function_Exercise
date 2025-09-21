@@ -1,0 +1,17 @@
+body {
+    background-image: url('img/Sunflower.png');
+     image-rendering: crisp-edges;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .card {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 8px solid transparent;
+    border-image: url('https://i.imgur.com/Wv1pD9S.png') 30 round; /* Soft floral border */
+    border-radius: 20px;
+    padding: 24px;
+  }
